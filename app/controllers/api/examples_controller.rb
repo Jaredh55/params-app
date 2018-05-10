@@ -7,4 +7,14 @@ class Api::ExamplesController < ApplicationController
     end
     render 'string.json.jbuilder'
   end
+
+  def url_segment
+    @message = params["wildcard"]
+    render 'url_segment.json.jbuilder'
+  end
+
+  def body_example
+    @message = params["message"]
+    render 'body_example.json.jbuilder'
+  end
 end
